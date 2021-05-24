@@ -8,6 +8,8 @@ const Oscar = require("../models/oscar-model");
 const router = express.Router();
 const unlinkAsync = promisify(fs.unlink);
 
+// Temprory storage for csv file
+
 var storage = multer.diskStorage({
 	destination: (req, file, cb) => {
 		cb(null, "./public/uploads");
@@ -19,11 +21,6 @@ var storage = multer.diskStorage({
 });
 
 var upload = multer({ storage: storage });
-
-/* GET home page. Default */
-router.get("/", function (req, res, next) {
-	res.render("index", { title: "Express" });
-});
 
 /**
  *
