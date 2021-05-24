@@ -3,6 +3,7 @@ const multer = require("multer");
 const csv = require("csv-parse");
 const fs = require("fs");
 const { promisify } = require("util");
+const Oscar = require("../models/oscar-model");
 
 const router = express.Router();
 const unlinkAsync = promisify(fs.unlink);
@@ -19,26 +20,50 @@ var storage = multer.diskStorage({
 
 var upload = multer({ storage: storage });
 
-/* GET home page. */
+/* GET home page. Default */
 router.get("/", function (req, res, next) {
 	res.render("index", { title: "Express" });
 });
 
-router.post("/upload", upload.single("csv-file"), (req, res, next) => {
+/**
+ *
+ * @param {String} filePath Temprory file address of csv file
+ * @returns
+ */
+
+const parse_csv = (filePath) =>
+	new Promise((resolve, reject) => {
+		let entries = [];
+		fs.createReadStream(filePath)
+			.pipe(csv({ autoParse: true, columns: true }))
+			.on("data", (row) => {
+				entries.push(row);
+			})
+			.on("end", async () => {
+				await unlinkAsync(filePath);
+				console.log("File parsed successfully ");
+				resolve(entries);
+			})
+			.on("error", (err) => reject(err))
+			.on("close", () => console.log("closed"));
+	});
+
+/* POST csv file */
+
+router.post("/upload", upload.single("csv-file"), async (req, res, next) => {
 	console.log(req.body);
 	console.log(req.file);
 
-	fs.createReadStream(req.file.path)
-		.pipe(csv({ delimiter: ",", columns: true }))
-		.on("data", (row) => {
-			// console.log(row);
-			console.log(Object.keys(row));
+	let entries = await parse_csv(req.file.path);
+
+	/* Query to upload all csv data to mongodb */
+
+	Oscar.insertMany(entries)
+		.then((data) => {
+			console.log(data);
+			return res.json(data);
 		})
-		.on("end", async () => {
-			await unlinkAsync(req.file.path);
-			console.log("File parsed successfully ");
-		});
-	res.json({ message: "Parsed Successfully" });
+		.catch((err) => console.log(err));
 });
 
 module.exports = router;
