@@ -28,14 +28,14 @@ app.use("/upload", uploadRouter);
 app.use("/users", usersRouter);
 app.use("/action", crudRouter);
 
-// catch 404 and forward to error handler
-app.use(function (req, res, next) {
-	next(createError(404));
-});
-
 /* GET home page. Default */
 app.get("/", function (req, res, next) {
 	res.render("index", { title: "Express" });
+});
+
+// catch 404 and forward to error handler
+app.use(function (req, res, next) {
+	next(createError(404));
 });
 
 // error handler
