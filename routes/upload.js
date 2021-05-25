@@ -1,49 +1,32 @@
 const express = require("express");
 const multer = require("multer");
 const csv = require("csv-parse");
-const fs = require("fs");
-const { promisify } = require("util");
 const Oscar = require("../models/oscar-model");
 const { authenticate } = require("./../authorize");
 
 const router = express.Router();
-const unlinkAsync = promisify(fs.unlink);
 
-// Temprory storage for csv file
-
-var storage = multer.diskStorage({
-	destination: (req, file, cb) => {
-		cb(null, "./public/uploads");
-	},
-	filename: (req, file, cb) => {
-		let filename = file.originalname.split(".");
-		cb(null, filename[0] + `${Date.now()}.` + filename[1]);
-	},
-});
-
-var upload = multer({ storage: storage });
+var upload = multer();
 
 /**
  *
- * @param {String} filePath Temprory file address of csv file
+ * @param {Buffer} fileBuffer Temprory file address of csv file
  * @returns
  */
 
-const parse_csv = (filePath) =>
+const parse_csv = (fileBuffer) =>
 	new Promise((resolve, reject) => {
-		let entries = [];
-		fs.createReadStream(filePath)
-			.pipe(csv({ autoParse: true, columns: true }))
-			.on("data", (row) => {
-				entries.push(row);
-			})
+		let result = [];
+		csv(fileBuffer, {
+			columns: true,
+		})
+			.on("data", (data) => result.push(data))
 			.on("end", async () => {
-				await unlinkAsync(filePath);
 				console.log("File parsed successfully ");
-				resolve(entries);
+				resolve(result);
 			})
-			.on("error", (err) => reject(err))
-			.on("close", () => console.log("closed"));
+			.on("close", () => console.log("closed"))
+			.on("error", (err) => reject(err));
 	});
 
 /* POST csv file */
@@ -51,11 +34,11 @@ const parse_csv = (filePath) =>
 router.post(
 	"/",
 	authenticate,
-	upload.single("csv-file"), // key should be csv-file and value = .csv file
+	upload.single("csv-file"), // key in form-data should be csv-file and value = .csv file
 	async (req, res, next) => {
 		console.log(req.file);
 
-		let entries = await parse_csv(req.file.path);
+		let entries = await parse_csv(req.file.buffer);
 
 		/* Query to upload all csv data to mongodb */
 

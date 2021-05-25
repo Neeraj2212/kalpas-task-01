@@ -573,7 +573,7 @@
 								{
 									"key": "csv-file",
 									"type": "file",
-									"src": "/D:/Learning/Internship-task/kalpas-task/Sample Files/_directors.csv"
+									"src": []
 								}
 							]
 						},
@@ -1136,13 +1136,13 @@
 		"type": "basic",
 		"basic": [
 			{
-				"key": "password",
-				"value": "qwerty1234",
+				"key": "username",
+				"value": "neeraj-5848",
 				"type": "string"
 			},
 			{
-				"key": "username",
-				"value": "neeraj-5848",
+				"key": "password",
+				"value": "qwerty1234",
 				"type": "string"
 			}
 		]
@@ -1170,12 +1170,7 @@
 	"variable": [
 		{
 			"key": "SITE",
-			"value": "localhost:3000",
-			"disabled": true
-		},
-		{
-			"key": "SITE",
-			"value": "kalpas-task.herokuapp.com"
+			"value": "localhost:3000"
 		}
 	]
 }

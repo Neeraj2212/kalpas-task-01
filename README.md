@@ -5,9 +5,10 @@
 3. `mongod` in another terminal to start mongodb local server
 4. `npm start` to start server on `localhost:3000/`
 
-Currently all postman api's are sending request to the deployed website to run it locally change SITE variable of collection with `localhost:3000`
-which is currently `kalpas-task.herokuapp.com`
+Postman collection api will send request to `localhost:3000` and work perfectly.
 
-## Stop server lovally 
+To send request to deployed website replace SITE varable in postman collection with `https://kalpas-task.herokuapp.com/`
 
-1. press Ctrl + c in both the terminals  
+## Stop server lovally
+
+1. press Ctrl + c in both the terminals
