@@ -4,7 +4,7 @@ const path = require("path");
 const cookieParser = require("cookie-parser");
 const logger = require("morgan");
 
-const indexRouter = require("./routes/index");
+const uploadRouter = require("./routes/upload");
 const usersRouter = require("./routes/users");
 const crudRouter = require("./routes/crud");
 const app = express();
@@ -21,7 +21,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, "public")));
 
-app.use("/", indexRouter);
+app.use("/upload", uploadRouter);
 app.use("/users", usersRouter);
 app.use("/action", crudRouter);
 

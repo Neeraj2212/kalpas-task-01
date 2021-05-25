@@ -47,8 +47,7 @@ const parse_csv = (filePath) =>
 
 /* POST csv file */
 
-router.post("/upload", upload.single("csv-file"), async (req, res, next) => {
-	console.log(req.body);
+router.post("/", upload.single("csv-file"), async (req, res, next) => {
 	console.log(req.file);
 
 	let entries = await parse_csv(req.file.path);
