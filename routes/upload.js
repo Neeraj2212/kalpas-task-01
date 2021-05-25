@@ -4,6 +4,7 @@ const csv = require("csv-parse");
 const fs = require("fs");
 const { promisify } = require("util");
 const Oscar = require("../models/oscar-model");
+const { authenticate } = require("./../authorize");
 
 const router = express.Router();
 const unlinkAsync = promisify(fs.unlink);
@@ -47,19 +48,24 @@ const parse_csv = (filePath) =>
 
 /* POST csv file */
 
-router.post("/", upload.single("csv-file"), async (req, res, next) => {
-	console.log(req.file);
+router.post(
+	"/",
+	authenticate,
+	upload.single("csv-file"), // key should be csv-file and value = .csv file
+	async (req, res, next) => {
+		console.log(req.file);
 
-	let entries = await parse_csv(req.file.path);
+		let entries = await parse_csv(req.file.path);
 
-	/* Query to upload all csv data to mongodb */
+		/* Query to upload all csv data to mongodb */
 
-	Oscar.insertMany(entries)
-		.then((data) => {
-			console.log(data);
-			return res.json(data);
-		})
-		.catch((err) => console.log(err));
-});
+		Oscar.insertMany(entries)
+			.then((data) => {
+				console.log(data);
+				return res.json(data);
+			})
+			.catch((err) => console.log(err));
+	}
+);
 
 module.exports = router;

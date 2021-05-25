@@ -1,0 +1,1181 @@
+{
+	"info": {
+		"_postman_id": "aec4e733-cb90-49b9-968c-50066148ad65",
+		"name": "kalpas-task-01",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "User Sign Up",
+			"item": [
+				{
+					"name": "localhost:3000/users/",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"neeraj-5848\",\r\n    \"password\": \"qwerty1234\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/users/",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"users",
+								""
+							]
+						},
+						"description": "**Route to Signup for a User .**"
+					},
+					"response": [
+						{
+							"name": "localhost:3000/users/",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"username\": \"neeraj-5848\",\r\n    \"password\": \"qwerty1234\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/users/",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"users",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "37"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"25-goRE45v1AEh2IY/48uJd3l7CkRE\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 25 May 2021 11:11:17 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Successfully signed up!\"\n}"
+						},
+						{
+							"name": "localhost:3000/users/",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"username\": \"neeraj-5658\",\r\n    \"password\": \"qwerty1234\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/users/",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"users",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "37"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"25-goRE45v1AEh2IY/48uJd3l7CkRE\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 25 May 2021 14:50:40 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Successfully signed up!\"\n}"
+						}
+					]
+				}
+			],
+			"description": "#### User can sign up from this request and then use his username and password in basic auth of collection to get authencticated",
+			"auth": {
+				"type": "noauth"
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "User CRUD",
+			"item": [
+				{
+					"name": "localhost:3000/users/",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/users/",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"users",
+								""
+							]
+						},
+						"description": "Get list of all registered user"
+					},
+					"response": [
+						{
+							"name": "localhost:3000/users/",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:3000/users/",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"users",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "441"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1b9-tPGGeekVJw81ubkfiban1a56288\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 25 May 2021 11:12:24 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"_id\": \"60acd6cefabda83fcc5618e6\",\n        \"username\": \"neeraj-2345\",\n        \"password\": \"$2a$10$lHQN.YXq0FIldjOBL7lIO.LIZT4JX8WBQniY0icvZnxPfTcGUMQb2\",\n        \"createdAt\": \"2021-05-25T10:51:58.266Z\",\n        \"updatedAt\": \"2021-05-25T11:05:42.605Z\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"60acdb54da2d9e31b4d59ea1\",\n        \"username\": \"neeraj-5848\",\n        \"password\": \"$2a$10$SfzIQ6PmeUGegm3GhydaKuRB04nokOn7MsjX4oUTl2SnQDSuWyzv2\",\n        \"createdAt\": \"2021-05-25T11:11:16.927Z\",\n        \"updatedAt\": \"2021-05-25T11:11:16.927Z\",\n        \"__v\": 0\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "localhost:3000/users/60acdb54da2d9e31b4d59ea1",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/users/60acdb54da2d9e31b4d59ea1",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"users",
+								"60acdb54da2d9e31b4d59ea1"
+							]
+						},
+						"description": "**GET Details of user with id 60acdb54da2d9e31b4d59ea1**"
+					},
+					"response": [
+						{
+							"name": "localhost:3000/users/60ad0ea58fc9fb48f4e27c27",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:3000/users/60acdb54da2d9e31b4d59ea1",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"users",
+										"60acdb54da2d9e31b4d59ea1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "145"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"91-JGINoOJDOg1xdygkBtgbe47drtY\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 25 May 2021 15:18:09 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"_id\": \"60acdb54da2d9e31b4d59ea1\",\n    \"username\": \"neeraj-5848\",\n    \"createdAt\": \"2021-05-25T11:11:16.927Z\",\n    \"updatedAt\": \"2021-05-25T11:11:16.927Z\",\n    \"__v\": 0\n}"
+						}
+					]
+				},
+				{
+					"name": "localhost:3000/users/60ad0ec08fc9fb48f4e27c2a",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\":\"Neeraj1234\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/users/60ad0ec08fc9fb48f4e27c2a",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"users",
+								"60ad0ec08fc9fb48f4e27c2a"
+							]
+						},
+						"description": "**Update details of user with id 60ad0ec08fc9fb48f4e27c2a**"
+					},
+					"response": [
+						{
+							"name": "localhost:3000/users/60ad0ec08fc9fb48f4e27c2a",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"username\":\"Neeraj1234\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/users/60ad0ec08fc9fb48f4e27c2a",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"users",
+										"60ad0ec08fc9fb48f4e27c2a"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "144"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"90-7mQ9Hq31Vg+RaFdsS/S02mtO4V4\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 25 May 2021 15:22:41 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"_id\": \"60ad0ec08fc9fb48f4e27c2a\",\n    \"username\": \"Neeraj1234\",\n    \"createdAt\": \"2021-05-25T14:50:40.075Z\",\n    \"updatedAt\": \"2021-05-25T15:22:41.381Z\",\n    \"__v\": 0\n}"
+						}
+					]
+				},
+				{
+					"name": "localhost:3000/users/60ad0ec08fc9fb48f4e27c2a",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/users/60ad0ec08fc9fb48f4e27c2a",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"users",
+								"60ad0ec08fc9fb48f4e27c2a"
+							]
+						},
+						"description": "**DELETE user with id 60ad0ec08fc9fb48f4e27c2a**"
+					},
+					"response": [
+						{
+							"name": "localhost:3000/users/60ad0ec08fc9fb48f4e27c2a",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "localhost:3000/users/60ad0ec08fc9fb48f4e27c2a",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"users",
+										"60ad0ec08fc9fb48f4e27c2a"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "144"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"90-7mQ9Hq31Vg+RaFdsS/S02mtO4V4\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 25 May 2021 15:23:47 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"_id\": \"60ad0ec08fc9fb48f4e27c2a\",\n    \"username\": \"Neeraj1234\",\n    \"createdAt\": \"2021-05-25T14:50:40.075Z\",\n    \"updatedAt\": \"2021-05-25T15:22:41.381Z\",\n    \"__v\": 0\n}"
+						},
+						{
+							"name": "localhost:3000/users/60ad0ec08fc9fb48f4e27c2a 2nd time",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "localhost:3000/users/60ad0ec08fc9fb48f4e27c2a",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"users",
+										"60ad0ec08fc9fb48f4e27c2a"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "26"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1a-hq/hT0ORGTkTfyRpVCZ/JB/r8Eg\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 25 May 2021 15:23:58 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"error\": \"User not found\"\n}"
+						}
+					]
+				}
+			],
+			"description": "**CRUD operations in USERs collection on Database**"
+		},
+		{
+			"name": "Upload CSV",
+			"item": [
+				{
+					"name": "localhost:3000/upload",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "csv-file",
+									"type": "file",
+									"src": "/D:/Learning/Internship-task/kalpas-task/Sample Files/_directors.csv"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/upload",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"upload"
+							]
+						},
+						"description": "**This route is to upload csv file data to mongoDB database .**\n\t\t\t-- csv file must contain 4 columns \n|name|year|nomination|rating|release\n\n\nsome sample files are given in sample files folder\nit is basically data of oscar winners which I used \n\n> Key value for file should be named as 'csv-file'"
+					},
+					"response": [
+						{
+							"name": "localhost:3000/upload",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "csv-file",
+											"type": "file",
+											"src": "/D:/Learning/Internship-task/kalpas-task/Sample Files/_directors.csv"
+										}
+									]
+								},
+								"url": {
+									"raw": "localhost:3000/upload",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"upload"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "9680"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"25d0-mYBbsHIQ43gmf2sXDUqtXQqtuPE\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 25 May 2021 14:45:48 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"_id\": \"60ad0d9c8fc9fb48f4e27bcf\",\n        \"name\": \"Birdman\",\n        \"year\": 2014,\n        \"rating\": 7.8,\n        \"release\": \"November\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"60ad0d9c8fc9fb48f4e27bd0\",\n        \"name\": \"Gravity\",\n        \"year\": 2013,\n        \"rating\": 7.9,\n        \"release\": \"October\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"60ad0d9c8fc9fb48f4e27bd1\",\n        \"name\": \"Life of Pi\",\n        \"year\": 2012,\n        \"rating\": 8,\n        \"release\": \"November\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"60ad0d9c8fc9fb48f4e27bd2\",\n        \"name\": \"The Artist\",\n        \"year\": 2011,\n        \"rating\": 8,\n        \"release\": \"October\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"60ad0d9c8fc9fb48f4e27bd3\",\n        \"name\": \"The King's Speech\",\n        \"year\": 2010,\n        \"rating\": 8,\n        \"release\": \"December\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"60ad0d9c8fc9fb48f4e27bd4\",\n        \"name\": \"The Hurt Locker\",\n        \"year\": 2009,\n        \"rating\": 7.6,\n        \"release\": \"July\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"60ad0d9c8fc9fb48f4e27bd5\",\n        \"name\": \"Slumdog Millionaire\",\n        \"year\": 2008,\n        \"rating\": 8,\n        \"release\": \"January\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"60ad0d9c8fc9fb48f4e27bd6\",\n        \"name\": \"No Country for Old Men\",\n        \"year\": 2007,\n        \"rating\": 8.1,\n        \"release\": \"November\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"60ad0d9c8fc9fb48f4e27bd7\",\n        \"name\": \"The Departed\",\n        \"year\": 2006,\n        \"rating\": 8.5,\n        \"release\": \"October\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"60ad0d9c8fc9fb48f4e27bd8\",\n        \"name\": \"Brokeback Mountain\",\n        \"year\": 2005,\n        \"rating\": 7.7,\n        \"release\": \"January\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"60ad0d9c8fc9fb48f4e27bd9\",\n        \"name\": \"Million Dollar Baby\",\n        \"year\": 2004,\n        \"rating\": 8.1,\n        \"release\": \"January\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"60ad0d9c8fc9fb48f4e27bda\",\n        \"name\": \"The Lord of the Rings: The Return of the King\",\n        \"year\": 2003,\n        \"rating\": 8.9,\n        \"release\": \"December\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"60ad0d9c8fc9fb48f4e27bdb\",\n        \"name\": \"The Pianist\",\n        \"year\": 2002,\n        \"rating\": 8.5,\n        \"release\": \"January\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"60ad0d9c8fc9fb48f4e27bdc\",\n        \"name\": \"A Beautiful Mind\",\n        \"year\": 2001,\n        \"rating\": 8.2,\n        \"release\": \"January\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"60ad0d9c8fc9fb48f4e27bdd\",\n        \"name\": \"Traffic\",\n        \"year\": 2000,\n        \"rating\": 7.6,\n        \"release\": \"January\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"60ad0d9c8fc9fb48f4e27bde\",\n        \"name\": \"American Beauty\",\n        \"year\": 1999,\n        \"rating\": 8.4,\n        \"release\": \"October\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"60ad0d9c8fc9fb48f4e27bdf\",\n        \"name\": \"Saving Private Ryan\",\n        \"year\": 1998,\n        \"rating\": 8.6,\n        \"release\": \"July\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"60ad0d9c8fc9fb48f4e27be0\",\n        \"name\": \"Titanic\",\n        \"year\": 1997,\n        \"rating\": 7.7,\n        \"release\": \"December\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"60ad0d9c8fc9fb48f4e27be1\",\n        \"name\": \"The English Patient\",\n        \"year\": 1996,\n        \"rating\": 7.4,\n        \"release\": \"November\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"60ad0d9c8fc9fb48f4e27be2\",\n        \"name\": \"Braveheart\",\n        \"year\": 1995,\n        \"rating\": 8.4,\n        \"release\": \"May\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"60ad0d9c8fc9fb48f4e27be3\",\n        \"name\": \"Forrest Gump\",\n        \"year\": 1994,\n        \"rating\": 8.8,\n        \"release\": \"July\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"60ad0d9c8fc9fb48f4e27be4\",\n        \"name\": \"Schindler's List\",\n        \"year\": 1993,\n        \"rating\": 8.9,\n        \"release\": \"December\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"60ad0d9c8fc9fb48f4e27be5\",\n        \"name\": \"Unforgiven\",\n        \"year\": 1992,\n        \"rating\": 8.3,\n        \"release\": \"August\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"60ad0d9c8fc9fb48f4e27be6\",\n        \"name\": \"The Silence of the Lambs\",\n        \"year\": 1991,\n        \"rating\": 8.6,\n        \"release\": \"February\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"60ad0d9c8fc9fb48f4e27be7\",\n        \"name\": \"Dances with Wolves\",\n        \"year\": 1990,\n        \"rating\": 8,\n        \"release\": \"November\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"60ad0d9c8fc9fb48f4e27be8\",\n        \"name\": \"Born on the Fourth of July\",\n        \"year\": 1989,\n        \"rating\": 7.2,\n        \"release\": \"January\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"60ad0d9c8fc9fb48f4e27be9\",\n        \"name\": \"Rain Man\",\n        \"year\": 1988,\n        \"rating\": 8,\n        \"release\": \"December\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"60ad0d9c8fc9fb48f4e27bea\",\n        \"name\": \"The Last Emperor\",\n        \"year\": 1987,\n        \"rating\": 7.8,\n        \"release\": \"October\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"60ad0d9c8fc9fb48f4e27beb\",\n        \"name\": \"Platoon\",\n        \"year\": 1986,\n        \"rating\": 8.1,\n        \"release\": \"February\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"60ad0d9c8fc9fb48f4e27bec\",\n        \"name\": \"Out of Africa\",\n        \"year\": 1985,\n        \"rating\": 7.2,\n        \"release\": \"December\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"60ad0d9c8fc9fb48f4e27bed\",\n        \"name\": \"Amadeus\",\n        \"year\": 1984,\n        \"rating\": 8.3,\n        \"release\": \"October\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"60ad0d9c8fc9fb48f4e27bee\",\n        \"name\": \"Terms of Endearment\",\n        \"year\": 1983,\n        \"rating\": 7.4,\n        \"release\": \"December\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"60ad0d9c8fc9fb48f4e27bef\",\n        \"name\": \"Gandhi\",\n        \"year\": 1982,\n        \"rating\": 8.1,\n        \"release\": \"December\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"60ad0d9c8fc9fb48f4e27bf0\",\n        \"name\": \"Reds\",\n        \"year\": 1981,\n        \"rating\": 7.5,\n        \"release\": \"December\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"60ad0d9c8fc9fb48f4e27bf1\",\n        \"name\": \"Ordinary People\",\n        \"year\": 1980,\n        \"rating\": 7.8,\n        \"release\": \"February\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"60ad0d9c8fc9fb48f4e27bf2\",\n        \"name\": \"Kramer vs. Kramer\",\n        \"year\": 1979,\n        \"rating\": 7.8,\n        \"release\": \"December\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"60ad0d9c8fc9fb48f4e27bf3\",\n        \"name\": \"The Deer Hunter\",\n        \"year\": 1978,\n        \"rating\": 8.2,\n        \"release\": \"February\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"60ad0d9c8fc9fb48f4e27bf4\",\n        \"name\": \"Annie Hall\",\n        \"year\": 1977,\n        \"rating\": 8.1,\n        \"release\": \"April\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"60ad0d9c8fc9fb48f4e27bf5\",\n        \"name\": \"Rocky\",\n        \"year\": 1976,\n        \"rating\": 8.1,\n        \"release\": \"December\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"60ad0d9c8fc9fb48f4e27bf6\",\n        \"name\": \"One Flew Over the Cuckoo's Nest\",\n        \"year\": 1975,\n        \"rating\": 8.7,\n        \"release\": \"November\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"60ad0d9c8fc9fb48f4e27bf7\",\n        \"name\": \"The Godfather: Part II\",\n        \"year\": 1974,\n        \"rating\": 9,\n        \"release\": \"December\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"60ad0d9c8fc9fb48f4e27bf8\",\n        \"name\": \"The Sting\",\n        \"year\": 1973,\n        \"rating\": 8.3,\n        \"release\": \"December\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"60ad0d9c8fc9fb48f4e27bf9\",\n        \"name\": \"Cabaret\",\n        \"year\": 1972,\n        \"rating\": 7.9,\n        \"release\": \"February\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"60ad0d9c8fc9fb48f4e27bfa\",\n        \"name\": \"The French Connection\",\n        \"year\": 1971,\n        \"rating\": 7.8,\n        \"release\": \"October\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"60ad0d9c8fc9fb48f4e27bfb\",\n        \"name\": \"Patton\",\n        \"year\": 1970,\n        \"rating\": 8,\n        \"release\": \"April\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"60ad0d9c8fc9fb48f4e27bfc\",\n        \"name\": \"Midnight Cowboy\",\n        \"year\": 1969,\n        \"rating\": 7.9,\n        \"release\": \"June\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"60ad0d9c8fc9fb48f4e27bfd\",\n        \"name\": \"Oliver!\",\n        \"year\": 1968,\n        \"rating\": 7.5,\n        \"release\": \"September\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"60ad0d9c8fc9fb48f4e27bfe\",\n        \"name\": \"The Graduate\",\n        \"year\": 1967,\n        \"rating\": 8,\n        \"release\": \"December\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"60ad0d9c8fc9fb48f4e27bff\",\n        \"name\": \"A Man for All Seasons\",\n        \"year\": 1966,\n        \"rating\": 7.9,\n        \"release\": \"May\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"60ad0d9c8fc9fb48f4e27c00\",\n        \"name\": \"The Sound of Music\",\n        \"year\": 1965,\n        \"rating\": 8,\n        \"release\": \"March\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"60ad0d9c8fc9fb48f4e27c01\",\n        \"name\": \"My Fair Lady\",\n        \"year\": 1964,\n        \"rating\": 7.9,\n        \"release\": \"December\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"60ad0d9c8fc9fb48f4e27c02\",\n        \"name\": \"Tom Jones\",\n        \"year\": 1963,\n        \"rating\": 6.8,\n        \"release\": \"December\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"60ad0d9c8fc9fb48f4e27c03\",\n        \"name\": \"Lawrence of Arabia\",\n        \"year\": 1962,\n        \"rating\": 8.4,\n        \"release\": \"January\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"60ad0d9c8fc9fb48f4e27c04\",\n        \"name\": \"West Side Story\",\n        \"year\": 1961,\n        \"rating\": 7.6,\n        \"release\": \"December\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"60ad0d9c8fc9fb48f4e27c05\",\n        \"name\": \"The Apartment\",\n        \"year\": 1960,\n        \"rating\": 8.3,\n        \"release\": \"September\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"60ad0d9c8fc9fb48f4e27c06\",\n        \"name\": \"Ben-Hur\",\n        \"year\": 1959,\n        \"rating\": 8.1,\n        \"release\": \"December\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"60ad0d9c8fc9fb48f4e27c07\",\n        \"name\": \"Gigi\",\n        \"year\": 1958,\n        \"rating\": 6.9,\n        \"release\": \"August\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"60ad0d9c8fc9fb48f4e27c08\",\n        \"name\": \"The Bridge on the River Kwai\",\n        \"year\": 1957,\n        \"rating\": 8.2,\n        \"release\": \"October\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"60ad0d9c8fc9fb48f4e27c09\",\n        \"name\": \"Giant\",\n        \"year\": 1956,\n        \"rating\": 7.7,\n        \"release\": \"November\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"60ad0d9c8fc9fb48f4e27c0a\",\n        \"name\": \"Marty\",\n        \"year\": 1955,\n        \"rating\": 7.7,\n        \"release\": \"June\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"60ad0d9c8fc9fb48f4e27c0b\",\n        \"name\": \"On the Waterfront\",\n        \"year\": 1954,\n        \"rating\": 8.3,\n        \"release\": \"June\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"60ad0d9c8fc9fb48f4e27c0c\",\n        \"name\": \"From Here to Eternity\",\n        \"year\": 1953,\n        \"rating\": 7.8,\n        \"release\": \"October\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"60ad0d9c8fc9fb48f4e27c0d\",\n        \"name\": \"The Quiet Man\",\n        \"year\": 1952,\n        \"rating\": 7.9,\n        \"release\": \"September\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"60ad0d9c8fc9fb48f4e27c0e\",\n        \"name\": \"A Place in the Sun\",\n        \"year\": 1951,\n        \"rating\": 7.8,\n        \"release\": \"October\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"60ad0d9c8fc9fb48f4e27c0f\",\n        \"name\": \"All About Eve\",\n        \"year\": 1950,\n        \"rating\": 8.3,\n        \"release\": \"January\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"60ad0d9c8fc9fb48f4e27c10\",\n        \"name\": \"A Letter to Three Wives\",\n        \"year\": 1949,\n        \"rating\": 7.9,\n        \"release\": \"January\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"60ad0d9c8fc9fb48f4e27c11\",\n        \"name\": \"The Treasure of the Sierra Madre\",\n        \"year\": 1948,\n        \"rating\": 8.3,\n        \"release\": \"January\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"60ad0d9c8fc9fb48f4e27c12\",\n        \"name\": \"Gentleman's Agreement\",\n        \"year\": 1947,\n        \"rating\": 7.4,\n        \"release\": \"February\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"60ad0d9c8fc9fb48f4e27c13\",\n        \"name\": \"The Best Years of Our Lives\",\n        \"year\": 1946,\n        \"rating\": 8.2,\n        \"release\": \"June\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"60ad0d9c8fc9fb48f4e27c14\",\n        \"name\": \"The Lost Weekend\",\n        \"year\": 1945,\n        \"rating\": 8,\n        \"release\": \"November\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"60ad0d9c8fc9fb48f4e27c15\",\n        \"name\": \"Going My Way\",\n        \"year\": 1944,\n        \"rating\": 7.3,\n        \"release\": \"October\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"60ad0d9c8fc9fb48f4e27c16\",\n        \"name\": \"Casablanca\",\n        \"year\": 1943,\n        \"rating\": 8.6,\n        \"release\": \"January\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"60ad0d9c8fc9fb48f4e27c17\",\n        \"name\": \"Mrs. Miniver\",\n        \"year\": 1942,\n        \"rating\": 7.6,\n        \"release\": \"December\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"60ad0d9c8fc9fb48f4e27c18\",\n        \"name\": \"How Green Was My Valley\",\n        \"year\": 1941,\n        \"rating\": 7.8,\n        \"release\": \"April\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"60ad0d9c8fc9fb48f4e27c19\",\n        \"name\": \"The Grapes of Wrath\",\n        \"year\": 1940,\n        \"rating\": 8.1,\n        \"release\": \"March\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"60ad0d9c8fc9fb48f4e27c1a\",\n        \"name\": \"Gone With the Wind\",\n        \"year\": 1939,\n        \"rating\": 8.2,\n        \"release\": \"January\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"60ad0d9c8fc9fb48f4e27c1b\",\n        \"name\": \"You Can't Take it With You\",\n        \"year\": 1938,\n        \"rating\": 8,\n        \"release\": \"November\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"60ad0d9c8fc9fb48f4e27c1c\",\n        \"name\": \"The Awful Truth\",\n        \"year\": 1937,\n        \"rating\": 8,\n        \"release\": \"October\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"60ad0d9c8fc9fb48f4e27c1d\",\n        \"name\": \"Mr. Deeds Goes to Town\",\n        \"year\": 1936,\n        \"rating\": 8,\n        \"release\": \"April\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"60ad0d9c8fc9fb48f4e27c1e\",\n        \"name\": \"The Informer\",\n        \"year\": 1935,\n        \"rating\": 7.6,\n        \"release\": \"July\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"60ad0d9c8fc9fb48f4e27c1f\",\n        \"name\": \"It Happened One Night\",\n        \"year\": 1934,\n        \"rating\": 8.2,\n        \"release\": \"February\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"60ad0d9c8fc9fb48f4e27c20\",\n        \"name\": \"Cavalcade\",\n        \"year\": 1933,\n        \"rating\": 6.1,\n        \"release\": \"April\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"60ad0d9c8fc9fb48f4e27c21\",\n        \"name\": \"Bad Girl\",\n        \"year\": 1931,\n        \"rating\": 6.7,\n        \"release\": \"August\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"60ad0d9c8fc9fb48f4e27c22\",\n        \"name\": \"Skippy\",\n        \"year\": 1930,\n        \"rating\": 6.3,\n        \"release\": \"April\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"60ad0d9c8fc9fb48f4e27c23\",\n        \"name\": \"All Quiet on the Western Front\",\n        \"year\": 1929,\n        \"rating\": 8.1,\n        \"release\": \"August\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"60ad0d9c8fc9fb48f4e27c24\",\n        \"name\": \"The Divine Lady\",\n        \"year\": 1928,\n        \"rating\": 6.3,\n        \"release\": \"\",\n        \"__v\": 0\n    }\n]"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "CRUD Oscar collection",
+			"item": [
+				{
+					"name": "localhost:3000/action/list",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/action/list",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"action",
+								"list"
+							]
+						},
+						"description": "**Route to List all documents from Oscar collection**"
+					},
+					"response": [
+						{
+							"name": "localhost:3000/action/list",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:3000/action/list",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"action",
+										"list"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "9680"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"25d0-zQxs1Z9LxYq88zkO78KSJlU8i/o\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 25 May 2021 15:02:37 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"_id\": \"60ad11818fc9fb48f4e27c2c\",\n        \"name\": \"Birdman\",\n        \"year\": 2014,\n        \"rating\": 7.8,\n        \"release\": \"November\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"60ad11818fc9fb48f4e27c2d\",\n        \"name\": \"Gravity\",\n        \"year\": 2013,\n        \"rating\": 7.9,\n        \"release\": \"October\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"60ad11818fc9fb48f4e27c2e\",\n        \"name\": \"Life of Pi\",\n        \"year\": 2012,\n        \"rating\": 8,\n        \"release\": \"November\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"60ad11818fc9fb48f4e27c2f\",\n        \"name\": \"The Artist\",\n        \"year\": 2011,\n        \"rating\": 8,\n        \"release\": \"October\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"60ad11818fc9fb48f4e27c30\",\n        \"name\": \"The King's Speech\",\n        \"year\": 2010,\n        \"rating\": 8,\n        \"release\": \"December\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"60ad11818fc9fb48f4e27c31\",\n        \"name\": \"The Hurt Locker\",\n        \"year\": 2009,\n        \"rating\": 7.6,\n        \"release\": \"July\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"60ad11818fc9fb48f4e27c32\",\n        \"name\": \"Slumdog Millionaire\",\n        \"year\": 2008,\n        \"rating\": 8,\n        \"release\": \"January\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"60ad11818fc9fb48f4e27c33\",\n        \"name\": \"No Country for Old Men\",\n        \"year\": 2007,\n        \"rating\": 8.1,\n        \"release\": \"November\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"60ad11818fc9fb48f4e27c34\",\n        \"name\": \"The Departed\",\n        \"year\": 2006,\n        \"rating\": 8.5,\n        \"release\": \"October\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"60ad11818fc9fb48f4e27c35\",\n        \"name\": \"Brokeback Mountain\",\n        \"year\": 2005,\n        \"rating\": 7.7,\n        \"release\": \"January\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"60ad11818fc9fb48f4e27c36\",\n        \"name\": \"Million Dollar Baby\",\n        \"year\": 2004,\n        \"rating\": 8.1,\n        \"release\": \"January\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"60ad11818fc9fb48f4e27c37\",\n        \"name\": \"The Lord of the Rings: The Return of the King\",\n        \"year\": 2003,\n        \"rating\": 8.9,\n        \"release\": \"December\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"60ad11818fc9fb48f4e27c38\",\n        \"name\": \"The Pianist\",\n        \"year\": 2002,\n        \"rating\": 8.5,\n        \"release\": \"January\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"60ad11818fc9fb48f4e27c39\",\n        \"name\": \"A Beautiful Mind\",\n        \"year\": 2001,\n        \"rating\": 8.2,\n        \"release\": \"January\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"60ad11818fc9fb48f4e27c3a\",\n        \"name\": \"Traffic\",\n        \"year\": 2000,\n        \"rating\": 7.6,\n        \"release\": \"January\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"60ad11818fc9fb48f4e27c3b\",\n        \"name\": \"American Beauty\",\n        \"year\": 1999,\n        \"rating\": 8.4,\n        \"release\": \"October\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"60ad11818fc9fb48f4e27c3c\",\n        \"name\": \"Saving Private Ryan\",\n        \"year\": 1998,\n        \"rating\": 8.6,\n        \"release\": \"July\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"60ad11818fc9fb48f4e27c3d\",\n        \"name\": \"Titanic\",\n        \"year\": 1997,\n        \"rating\": 7.7,\n        \"release\": \"December\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"60ad11818fc9fb48f4e27c3e\",\n        \"name\": \"The English Patient\",\n        \"year\": 1996,\n        \"rating\": 7.4,\n        \"release\": \"November\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"60ad11818fc9fb48f4e27c3f\",\n        \"name\": \"Braveheart\",\n        \"year\": 1995,\n        \"rating\": 8.4,\n        \"release\": \"May\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"60ad11818fc9fb48f4e27c40\",\n        \"name\": \"Forrest Gump\",\n        \"year\": 1994,\n        \"rating\": 8.8,\n        \"release\": \"July\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"60ad11818fc9fb48f4e27c41\",\n        \"name\": \"Schindler's List\",\n        \"year\": 1993,\n        \"rating\": 8.9,\n        \"release\": \"December\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"60ad11818fc9fb48f4e27c42\",\n        \"name\": \"Unforgiven\",\n        \"year\": 1992,\n        \"rating\": 8.3,\n        \"release\": \"August\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"60ad11818fc9fb48f4e27c43\",\n        \"name\": \"The Silence of the Lambs\",\n        \"year\": 1991,\n        \"rating\": 8.6,\n        \"release\": \"February\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"60ad11818fc9fb48f4e27c44\",\n        \"name\": \"Dances with Wolves\",\n        \"year\": 1990,\n        \"rating\": 8,\n        \"release\": \"November\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"60ad11818fc9fb48f4e27c45\",\n        \"name\": \"Born on the Fourth of July\",\n        \"year\": 1989,\n        \"rating\": 7.2,\n        \"release\": \"January\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"60ad11818fc9fb48f4e27c46\",\n        \"name\": \"Rain Man\",\n        \"year\": 1988,\n        \"rating\": 8,\n        \"release\": \"December\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"60ad11818fc9fb48f4e27c47\",\n        \"name\": \"The Last Emperor\",\n        \"year\": 1987,\n        \"rating\": 7.8,\n        \"release\": \"October\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"60ad11818fc9fb48f4e27c48\",\n        \"name\": \"Platoon\",\n        \"year\": 1986,\n        \"rating\": 8.1,\n        \"release\": \"February\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"60ad11818fc9fb48f4e27c49\",\n        \"name\": \"Out of Africa\",\n        \"year\": 1985,\n        \"rating\": 7.2,\n        \"release\": \"December\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"60ad11818fc9fb48f4e27c4a\",\n        \"name\": \"Amadeus\",\n        \"year\": 1984,\n        \"rating\": 8.3,\n        \"release\": \"October\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"60ad11818fc9fb48f4e27c4b\",\n        \"name\": \"Terms of Endearment\",\n        \"year\": 1983,\n        \"rating\": 7.4,\n        \"release\": \"December\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"60ad11818fc9fb48f4e27c4c\",\n        \"name\": \"Gandhi\",\n        \"year\": 1982,\n        \"rating\": 8.1,\n        \"release\": \"December\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"60ad11818fc9fb48f4e27c4d\",\n        \"name\": \"Reds\",\n        \"year\": 1981,\n        \"rating\": 7.5,\n        \"release\": \"December\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"60ad11818fc9fb48f4e27c4e\",\n        \"name\": \"Ordinary People\",\n        \"year\": 1980,\n        \"rating\": 7.8,\n        \"release\": \"February\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"60ad11818fc9fb48f4e27c4f\",\n        \"name\": \"Kramer vs. Kramer\",\n        \"year\": 1979,\n        \"rating\": 7.8,\n        \"release\": \"December\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"60ad11818fc9fb48f4e27c50\",\n        \"name\": \"The Deer Hunter\",\n        \"year\": 1978,\n        \"rating\": 8.2,\n        \"release\": \"February\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"60ad11818fc9fb48f4e27c51\",\n        \"name\": \"Annie Hall\",\n        \"year\": 1977,\n        \"rating\": 8.1,\n        \"release\": \"April\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"60ad11818fc9fb48f4e27c52\",\n        \"name\": \"Rocky\",\n        \"year\": 1976,\n        \"rating\": 8.1,\n        \"release\": \"December\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"60ad11818fc9fb48f4e27c53\",\n        \"name\": \"One Flew Over the Cuckoo's Nest\",\n        \"year\": 1975,\n        \"rating\": 8.7,\n        \"release\": \"November\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"60ad11818fc9fb48f4e27c54\",\n        \"name\": \"The Godfather: Part II\",\n        \"year\": 1974,\n        \"rating\": 9,\n        \"release\": \"December\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"60ad11818fc9fb48f4e27c55\",\n        \"name\": \"The Sting\",\n        \"year\": 1973,\n        \"rating\": 8.3,\n        \"release\": \"December\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"60ad11818fc9fb48f4e27c56\",\n        \"name\": \"Cabaret\",\n        \"year\": 1972,\n        \"rating\": 7.9,\n        \"release\": \"February\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"60ad11818fc9fb48f4e27c57\",\n        \"name\": \"The French Connection\",\n        \"year\": 1971,\n        \"rating\": 7.8,\n        \"release\": \"October\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"60ad11818fc9fb48f4e27c58\",\n        \"name\": \"Patton\",\n        \"year\": 1970,\n        \"rating\": 8,\n        \"release\": \"April\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"60ad11818fc9fb48f4e27c59\",\n        \"name\": \"Midnight Cowboy\",\n        \"year\": 1969,\n        \"rating\": 7.9,\n        \"release\": \"June\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"60ad11818fc9fb48f4e27c5a\",\n        \"name\": \"Oliver!\",\n        \"year\": 1968,\n        \"rating\": 7.5,\n        \"release\": \"September\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"60ad11818fc9fb48f4e27c5b\",\n        \"name\": \"The Graduate\",\n        \"year\": 1967,\n        \"rating\": 8,\n        \"release\": \"December\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"60ad11818fc9fb48f4e27c5c\",\n        \"name\": \"A Man for All Seasons\",\n        \"year\": 1966,\n        \"rating\": 7.9,\n        \"release\": \"May\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"60ad11818fc9fb48f4e27c5d\",\n        \"name\": \"The Sound of Music\",\n        \"year\": 1965,\n        \"rating\": 8,\n        \"release\": \"March\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"60ad11818fc9fb48f4e27c5e\",\n        \"name\": \"My Fair Lady\",\n        \"year\": 1964,\n        \"rating\": 7.9,\n        \"release\": \"December\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"60ad11818fc9fb48f4e27c5f\",\n        \"name\": \"Tom Jones\",\n        \"year\": 1963,\n        \"rating\": 6.8,\n        \"release\": \"December\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"60ad11818fc9fb48f4e27c60\",\n        \"name\": \"Lawrence of Arabia\",\n        \"year\": 1962,\n        \"rating\": 8.4,\n        \"release\": \"January\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"60ad11818fc9fb48f4e27c61\",\n        \"name\": \"West Side Story\",\n        \"year\": 1961,\n        \"rating\": 7.6,\n        \"release\": \"December\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"60ad11818fc9fb48f4e27c62\",\n        \"name\": \"The Apartment\",\n        \"year\": 1960,\n        \"rating\": 8.3,\n        \"release\": \"September\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"60ad11818fc9fb48f4e27c63\",\n        \"name\": \"Ben-Hur\",\n        \"year\": 1959,\n        \"rating\": 8.1,\n        \"release\": \"December\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"60ad11818fc9fb48f4e27c64\",\n        \"name\": \"Gigi\",\n        \"year\": 1958,\n        \"rating\": 6.9,\n        \"release\": \"August\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"60ad11818fc9fb48f4e27c65\",\n        \"name\": \"The Bridge on the River Kwai\",\n        \"year\": 1957,\n        \"rating\": 8.2,\n        \"release\": \"October\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"60ad11818fc9fb48f4e27c66\",\n        \"name\": \"Giant\",\n        \"year\": 1956,\n        \"rating\": 7.7,\n        \"release\": \"November\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"60ad11818fc9fb48f4e27c67\",\n        \"name\": \"Marty\",\n        \"year\": 1955,\n        \"rating\": 7.7,\n        \"release\": \"June\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"60ad11818fc9fb48f4e27c68\",\n        \"name\": \"On the Waterfront\",\n        \"year\": 1954,\n        \"rating\": 8.3,\n        \"release\": \"June\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"60ad11818fc9fb48f4e27c69\",\n        \"name\": \"From Here to Eternity\",\n        \"year\": 1953,\n        \"rating\": 7.8,\n        \"release\": \"October\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"60ad11818fc9fb48f4e27c6a\",\n        \"name\": \"The Quiet Man\",\n        \"year\": 1952,\n        \"rating\": 7.9,\n        \"release\": \"September\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"60ad11818fc9fb48f4e27c6b\",\n        \"name\": \"A Place in the Sun\",\n        \"year\": 1951,\n        \"rating\": 7.8,\n        \"release\": \"October\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"60ad11818fc9fb48f4e27c6c\",\n        \"name\": \"All About Eve\",\n        \"year\": 1950,\n        \"rating\": 8.3,\n        \"release\": \"January\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"60ad11818fc9fb48f4e27c6d\",\n        \"name\": \"A Letter to Three Wives\",\n        \"year\": 1949,\n        \"rating\": 7.9,\n        \"release\": \"January\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"60ad11818fc9fb48f4e27c6e\",\n        \"name\": \"The Treasure of the Sierra Madre\",\n        \"year\": 1948,\n        \"rating\": 8.3,\n        \"release\": \"January\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"60ad11818fc9fb48f4e27c6f\",\n        \"name\": \"Gentleman's Agreement\",\n        \"year\": 1947,\n        \"rating\": 7.4,\n        \"release\": \"February\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"60ad11818fc9fb48f4e27c70\",\n        \"name\": \"The Best Years of Our Lives\",\n        \"year\": 1946,\n        \"rating\": 8.2,\n        \"release\": \"June\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"60ad11818fc9fb48f4e27c71\",\n        \"name\": \"The Lost Weekend\",\n        \"year\": 1945,\n        \"rating\": 8,\n        \"release\": \"November\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"60ad11818fc9fb48f4e27c72\",\n        \"name\": \"Going My Way\",\n        \"year\": 1944,\n        \"rating\": 7.3,\n        \"release\": \"October\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"60ad11818fc9fb48f4e27c73\",\n        \"name\": \"Casablanca\",\n        \"year\": 1943,\n        \"rating\": 8.6,\n        \"release\": \"January\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"60ad11818fc9fb48f4e27c74\",\n        \"name\": \"Mrs. Miniver\",\n        \"year\": 1942,\n        \"rating\": 7.6,\n        \"release\": \"December\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"60ad11818fc9fb48f4e27c75\",\n        \"name\": \"How Green Was My Valley\",\n        \"year\": 1941,\n        \"rating\": 7.8,\n        \"release\": \"April\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"60ad11818fc9fb48f4e27c76\",\n        \"name\": \"The Grapes of Wrath\",\n        \"year\": 1940,\n        \"rating\": 8.1,\n        \"release\": \"March\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"60ad11818fc9fb48f4e27c77\",\n        \"name\": \"Gone With the Wind\",\n        \"year\": 1939,\n        \"rating\": 8.2,\n        \"release\": \"January\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"60ad11818fc9fb48f4e27c78\",\n        \"name\": \"You Can't Take it With You\",\n        \"year\": 1938,\n        \"rating\": 8,\n        \"release\": \"November\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"60ad11818fc9fb48f4e27c79\",\n        \"name\": \"The Awful Truth\",\n        \"year\": 1937,\n        \"rating\": 8,\n        \"release\": \"October\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"60ad11818fc9fb48f4e27c7a\",\n        \"name\": \"Mr. Deeds Goes to Town\",\n        \"year\": 1936,\n        \"rating\": 8,\n        \"release\": \"April\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"60ad11818fc9fb48f4e27c7b\",\n        \"name\": \"The Informer\",\n        \"year\": 1935,\n        \"rating\": 7.6,\n        \"release\": \"July\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"60ad11818fc9fb48f4e27c7c\",\n        \"name\": \"It Happened One Night\",\n        \"year\": 1934,\n        \"rating\": 8.2,\n        \"release\": \"February\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"60ad11818fc9fb48f4e27c7d\",\n        \"name\": \"Cavalcade\",\n        \"year\": 1933,\n        \"rating\": 6.1,\n        \"release\": \"April\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"60ad11818fc9fb48f4e27c7e\",\n        \"name\": \"Bad Girl\",\n        \"year\": 1931,\n        \"rating\": 6.7,\n        \"release\": \"August\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"60ad11818fc9fb48f4e27c7f\",\n        \"name\": \"Skippy\",\n        \"year\": 1930,\n        \"rating\": 6.3,\n        \"release\": \"April\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"60ad11818fc9fb48f4e27c80\",\n        \"name\": \"All Quiet on the Western Front\",\n        \"year\": 1929,\n        \"rating\": 8.1,\n        \"release\": \"August\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"60ad11818fc9fb48f4e27c81\",\n        \"name\": \"The Divine Lady\",\n        \"year\": 1928,\n        \"rating\": 6.3,\n        \"release\": \"\",\n        \"__v\": 0\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "localhost:3000/action/create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Pirates of the Carribian\",\r\n    \"year\":2015,\r\n    \"rating\":8.5,\r\n    \"release\":\"january\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/action/create",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"action",
+								"create"
+							]
+						},
+						"description": "**Route to create new Award document**"
+					},
+					"response": [
+						{
+							"name": "localhost:3000/action/create",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\":\"Pirates of the Carribian\",\r\n    \"year\":2015,\r\n    \"rating\":8.5,\r\n    \"release\":\"january\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/action/create",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"action",
+										"create"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "35"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"23-XBlkpTFHQMxQgoZyy0xtiij7xc0\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 25 May 2021 14:58:46 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Successfully Saved ! \"\n}"
+						}
+					]
+				},
+				{
+					"name": "localhost:3000/action/oscar/60ad0d9c8fc9fb48f4e27bcf",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/action/oscar/60ad0d9c8fc9fb48f4e27bcf",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"action",
+								"oscar",
+								"60ad0d9c8fc9fb48f4e27bcf"
+							]
+						},
+						"description": "**Get Details of Award with id 60ad0d9c8fc9fb48f4e27bcf**"
+					},
+					"response": [
+						{
+							"name": "localhost:3000/action/oscar/60ad0d9c8fc9fb48f4e27bcf",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:3000/action/oscar/60ad0d9c8fc9fb48f4e27bcf",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"action",
+										"oscar",
+										"60ad0d9c8fc9fb48f4e27bcf"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "105"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"69-7k/R/jjjvASdOuuSfs3bKKH+Stk\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 25 May 2021 14:55:48 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"_id\": \"60ad0d9c8fc9fb48f4e27bcf\",\n    \"name\": \"Birdman\",\n    \"year\": 2014,\n    \"rating\": 7.8,\n    \"release\": \"November\",\n    \"__v\": 0\n}"
+						}
+					]
+				},
+				{
+					"name": "localhost:3000/action/oscar/60ad11818fc9fb48f4e27c2c",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Pirates of the Caribbean: The Curse of the Black Pearl\",\r\n    \"year\":2015,\r\n    \"rating\":8.5\r\n   \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/action/oscar/60ad11818fc9fb48f4e27c2c",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"action",
+								"oscar",
+								"60ad11818fc9fb48f4e27c2c"
+							]
+						},
+						"description": "**Route to update an document**"
+					},
+					"response": [
+						{
+							"name": "localhost:3000/action/oscar/60ad11818fc9fb48f4e27c2c",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\":\"Pirates of the Caribbean: Dead Men Tell No Tales\",\r\n    \"year\":2015,\r\n    \"rating\":8\r\n   \r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/action/oscar/60ad11818fc9fb48f4e27c2c",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"action",
+										"oscar",
+										"60ad11818fc9fb48f4e27c2c"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "144"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"90-DPiUvsxxiGwbBBXTZRO17qRj2lo\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 25 May 2021 15:07:51 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"_id\": \"60ad11818fc9fb48f4e27c2c\",\n    \"name\": \"Pirates of the Caribbean: Dead Men Tell No Tales\",\n    \"year\": 2015,\n    \"rating\": 8,\n    \"release\": \"November\",\n    \"__v\": 0\n}"
+						},
+						{
+							"name": "localhost:3000/action/oscar/60ad11818fc9fb48f4e27c2c",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\":\"Pirates of the Caribbean: The Curse of the Black Pearl\",\r\n    \"year\":2015,\r\n    \"rating\":8.5\r\n   \r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/action/oscar/60ad11818fc9fb48f4e27c2c",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"action",
+										"oscar",
+										"60ad11818fc9fb48f4e27c2c"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "152"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"98-azHbOuEl06JIwop2fcWWUqtTaF0\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 25 May 2021 15:08:30 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"_id\": \"60ad11818fc9fb48f4e27c2c\",\n    \"name\": \"Pirates of the Caribbean: The Curse of the Black Pearl\",\n    \"year\": 2015,\n    \"rating\": 8.5,\n    \"release\": \"November\",\n    \"__v\": 0\n}"
+						}
+					]
+				},
+				{
+					"name": "localhost:3000/action/oscar/60ad11818fc9fb48f4e27c2c",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/action/oscar/60ad11818fc9fb48f4e27c2c",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"action",
+								"oscar",
+								"60ad11818fc9fb48f4e27c2c"
+							]
+						},
+						"description": "**Route for delete a soecific doc by id**"
+					},
+					"response": [
+						{
+							"name": "localhost:3000/action/oscar/60ad11818fc9fb48f4e27c2c",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "localhost:3000/action/oscar/60ad11818fc9fb48f4e27c2c",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"action",
+										"oscar",
+										"60ad11818fc9fb48f4e27c2c"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "152"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"98-azHbOuEl06JIwop2fcWWUqtTaF0\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 25 May 2021 15:09:59 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"_id\": \"60ad11818fc9fb48f4e27c2c\",\n    \"name\": \"Pirates of the Caribbean: The Curse of the Black Pearl\",\n    \"year\": 2015,\n    \"rating\": 8.5,\n    \"release\": \"November\",\n    \"__v\": 0\n}"
+						}
+					]
+				}
+			],
+			"description": "### Routes to Manage collection in mongodb"
+		}
+	],
+	"auth": {
+		"type": "basic",
+		"basic": [
+			{
+				"key": "password",
+				"value": "qwerty1234",
+				"type": "string"
+			},
+			{
+				"key": "username",
+				"value": "neeraj-5848",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
